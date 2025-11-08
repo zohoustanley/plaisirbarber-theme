@@ -20,6 +20,7 @@ if (function_exists('pbcore_get_settings')) {
         'hours'         => "Mardi – Samedi : 10h–20h",
         'instagram_url' => "https://www.instagram.com",
         'tiktok_url'    => "https://www.tiktok.com",
+        'whatsapp_url'    => "https://www.whatsapp.com",
         'map_iframe'    => "",
     ];
 }
@@ -347,7 +348,7 @@ if (function_exists('pbcore_get_settings')) {
                         </a>
                     <?php endif; ?>
 
-                    <a href="<?php echo esc_url($pb['tiktok_url']); ?>" target="_blank" rel="noreferrer">
+                    <a href="<?php echo esc_url($pb['whatsapp_url']); ?>" target="_blank" rel="noreferrer">
                         🎥 WhatsApp<br>
                         <span style="color:#9ca3af;font-size:.85rem;">@plaisirbarber</span>
                     </a>
