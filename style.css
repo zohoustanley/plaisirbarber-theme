@@ -1,0 +1,788 @@
+/*
+ Theme Name: Plaisir Barber
+ Theme URI: https://linkedin.com/in/yannickzohou
+ Author: Yannick ZOHOU
+ Author URI: https://linkedin.com/in/yannickzohou
+ Description: Thème vitrine pour salon de coiffure / barbershop.
+ Version: 1.0.0
+ Text Domain: plaisirbarber
+*/
+
+.barbercolor {
+    color: #d3ac45 !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #f9fafb;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Layout */
+
+.site-main article h1 {
+    color: #111827;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.section--dark {
+    background: #111827;
+}
+
+.section--soft {
+    background: rgb(210, 170, 59);
+    color: #111827;
+}
+
+.section--light {
+    background: #ffffff;
+    color: #111827;
+}
+
+.section__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.site-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+}
+
+.logo-text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.logo-text span {
+    color: #d3ac45;
+}
+
+.main-nav .menu {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    font-size: .9rem;
+    text-transform: uppercase;
+}
+
+/* Boutons */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .85rem 1.7rem;
+    border-radius: 999px;
+    font-size: .9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.btn--primary {
+    background: #d3ac45;
+    color: #111827;
+}
+
+.btn--ghost {
+    border-color: #d3ac45;
+    color: #d3ac45;
+    background: transparent;
+}
+
+.btn--light {
+    background: #ffffff;
+    color: #111827;
+}
+
+/* Hero vidéo */
+
+.hero {
+    position: relative;
+    min-height: 90vh;
+    background-color: #1f2937;
+    overflow: hidden;
+}
+
+.hero__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.45);
+}
+
+.hero__overlay {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 3rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    margin-bottom: 1.5rem;
+    max-width: 30rem;
+    font-size: 1rem;
+}
+
+/* Localisation */
+
+.location-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 2.5rem;
+}
+
+.location-card {
+    background: #1f2937;
+    border-radius: 1rem;
+    padding: 2.5rem;
+}
+
+/* Social + galerie */
+
+.social-gallery-grid {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.social-card {
+    background: #1f2937;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+/* Carousel simple */
+
+.gallery-carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.gallery-track {
+    display: flex;
+    transition: transform .4s ease;
+}
+
+.gallery-controls {
+    position: absolute;
+    inset-inline: 0;
+    bottom: .75rem;
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.gallery-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    border: 1px solid #d3ac45;
+    background: transparent;
+    cursor: pointer;
+}
+
+.gallery-dot.is-active {
+    background: #d3ac45;
+}
+
+/* Tarifs */
+
+.prices-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 2.5rem;
+}
+
+.prices-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .95rem;
+}
+
+.prices-table tr + tr td {
+    border-top: 1px solid #d1d5db;
+}
+
+.prices-table td {
+    padding: .75rem 0;
+}
+
+/* Équipe */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1.5rem;
+}
+
+.team-card {
+    border-radius: 1.25rem;
+    padding: 1rem;
+    background: #f9fafb;
+    color: #111827;
+    text-align: center;
+}
+
+.team-card img {
+    display: initial;
+}
+
+/* Footer */
+
+.site-footer {
+    background: #020617;
+    color: #9ca3af;
+    padding: 2.5rem 0 1.5rem;
+    font-size: .85rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) repeat(2, minmax(0, 1fr)) minmax(0, 1fr);
+    gap: 2rem;
+}
+
+.footer-title {
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .hero-grid,
+    .location-grid,
+    .social-gallery-grid,
+    .prices-grid,
+    .footer-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .site-header {
+        position: static;
+        background: #020617;
+    }
+
+    .hero {
+        padding-top: 4rem;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* Nouvelle galerie en grille */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-card {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #020617;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    transition: transform .4s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-card__label {
+    position: absolute;
+    left: .75rem;
+    bottom: .75rem;
+    padding: .25rem .6rem;
+    border-radius: 999px;
+    background: rgba(0,0,0,.6);
+    font-size: .75rem;
+}
+
+/* Bloc texte "Nos tarifs" centré */
+#tarifs .tarifs-header {
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    color: #F5F5F5;
+}
+
+.centered-header {
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+#tarifs .tarifs-header p {
+    margin: 0 0 .6rem;
+    font-size: .95rem;
+    color: #fffe; /* gris doux */
+}
+
+.smaller-notice {
+    font-size: .75rem !important;
+}
+
+/* Grille des groupes de prestations */
+#tarifs .tarifs-groups {
+    display: grid;
+    grid-template-columns: 1fr;   /* mobile : 1 colonne */
+    gap: 1.5rem;
+}
+
+/* Desktop / grand écran : 3 colonnes */
+@media (min-width: 900px) {
+    #tarifs .tarifs-groups {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Optionnel : harmoniser les "cards" de groupes */
+#tarifs .price-group {
+    background: #ffffff;
+    border-radius: .75rem;
+    padding: 1.25rem 1.25rem 1rem;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+    height: 100%;
+}
+
+#tarifs .price-group__title {
+    font-size: 1.05rem;
+    margin: 0 0 .3rem;
+}
+
+#tarifs .price-group__desc {
+    margin: 0 0 .75rem;
+    font-size: .85rem;
+    color: #6b7280;
+}
+
+/* ---------- GALERIE : CAROUSEL MULTI-IMAGES ---------- */
+
+#galerie .gallery-carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.45);
+}
+
+#galerie .gallery-track {
+    display: flex;
+    transition: transform .4s ease;
+}
+
+/* Mobile : 1 image visible (100%) */
+#galerie .gallery-item {
+    flex: 0 0 100%;
+    min-width: 0;          /* <– TRÈS IMPORTANT pour autoriser le shrink */
+    position: relative;
+    overflow: hidden;
+    height: 260px;
+    margin: 0px 15px 0px 15px;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    /* Tablette / Desktop : 4 images visibles (25%) */
+    #galerie .gallery-item {
+        flex: 0 0 25%;
+        height: 250px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #galerie .gallery-item {
+        height: 250px;
+    }
+}
+
+#galerie .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: zoom-in;
+}
+
+/* Label sur l’image */
+#galerie .gallery-card__label {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: #f9fafb;
+    padding: .35rem .75rem;
+    border-radius: 999px;
+    font-size: .8rem;
+}
+
+/* Flèches du carousel */
+
+.gallery-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    border: none;
+    background: rgba(0, 0, 0, 0.55);
+    color: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.3rem;
+    z-index: 2;
+}
+
+.gallery-arrow--prev {
+    left: .75rem;
+}
+
+.gallery-arrow--next {
+    right: .75rem;
+}
+
+.gallery-arrow:hover {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+/* Petits points */
+
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    gap: .4rem;
+    margin-top: .8rem;
+}
+
+.gallery-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    border: none;
+    background: rgba(148, 163, 184, 0.7);
+    cursor: pointer;
+}
+
+.gallery-dot.is-active {
+    width: 18px;
+    background: #fbbf24; /* léger jaune doré, adapte si besoin */
+}
+
+/* ---------- LIGHTBOX GALERIE ---------- */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.lightbox.is-open {
+    display: flex;
+}
+
+.lightbox__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.lightbox__content {
+    position: relative;
+    z-index: 1;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.lightbox__img {
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+    display: block;
+}
+
+.lightbox__close {
+    position: absolute;
+    top: -2.2rem;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    border: none;
+    background: rgba(0, 0, 0, 0.85);
+    color: #f9fafb;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ======== HEADER MENU STYLING ======== */
+
+/* Liens du menu */
+.main-nav .menu a {
+    color: #f9fafb;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .85rem;
+    letter-spacing: .05em;
+    transition: color .2s ease;
+    position: relative;
+    padding-bottom: .25rem;
+}
+
+/* Soulignage au survol */
+.main-nav .menu a:hover {
+    color: #fbbf24;
+}
+
+.main-nav .menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #fbbf24;
+    transition: width .2s ease;
+}
+
+.main-nav .menu .current-menu-item > a::after,
+.main-nav .menu .current_page_item > a::after,
+.main-nav .menu .current-menu-ancestor > a::after {
+    width: 100%;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+/* --- MENU DE BASE --- */
+.main-nav .menu {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav .menu li {
+    position: relative;
+}
+
+.main-nav .menu li + li::before {
+    content: "|";
+    color: rgba(255, 255, 255, 0.4);
+    margin-right: 1.5rem;
+}
+
+/* Liens */
+.main-nav .menu a {
+    color: #f9fafb;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .85rem;
+    letter-spacing: .05em;
+    transition: color .2s ease;
+}
+
+.main-nav .menu a:hover {
+    color: #fbbf24; /* doré / couleur d’accent */
+}
+
+/* --- MENU BURGER --- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: .4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle .menu-line {
+    width: 24px;
+    height: 2px;
+    background: #f9fafb;
+    display: block;
+    transition: all .3s ease;
+}
+
+/* --- VERSION MOBILE --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #111827;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .3s ease;
+    }
+
+    .main-nav.open {
+        max-height: 300px; /* s’ouvre */
+    }
+
+    .main-nav .menu {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+
+    .main-nav .menu li + li::before {
+        content: none; /* supprime la barre verticale */
+    }
+
+    /* Animation burger ouvert */
+    .menu-toggle.open .menu-line:nth-child(1) {
+        transform: rotate(45deg) translateY(6px);
+    }
+
+    .menu-toggle.open .menu-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open .menu-line:nth-child(3) {
+        transform: rotate(-45deg) translateY(-6px);
+    }
+}
+
+/* ======== LOGO / BRANDING ======== */
+
+.site-branding {
+    display: flex;
+    align-items: center;
+}
+
+.site-logo img {
+    height: 90px;           /* taille du logo */
+    width: auto;
+    display: block;
+}
+
+.site-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fbbf24;         /* couleur dorée, adapte si besoin */
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+/* Ajuste le menu pour qu’il prenne la place restante */
+.main-nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.site-header {
+    background: #000000; /* gris/noir élégant */
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    .site-logo img {
+        height: 40px;
+    }
+}
+
+.bs-booking-step-confirm{
+    color: #111827 !important;
+}
