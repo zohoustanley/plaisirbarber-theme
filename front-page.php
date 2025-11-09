@@ -338,19 +338,19 @@ if (function_exists('pbcore_get_settings')) {
                     <?php if (!empty($pb['instagram_url'])) : ?>
                         <a href="<?php echo esc_url($pb['instagram_url']); ?>" target="_blank" rel="noreferrer">
                             📸 Instagram<br>
-                            <span style="color:#9ca3af;font-size:.85rem;">@plaisirbarber</span>
+                            <span style="color:#9ca3af;font-size:.85rem;">@plaisirbarber90</span>
                         </a>
                     <?php endif; ?>
                     <?php if (!empty($pb['tiktok_url'])) : ?>
                         <a href="<?php echo esc_url($pb['tiktok_url']); ?>" target="_blank" rel="noreferrer">
                             🎥 TikTok<br>
-                            <span style="color:#9ca3af;font-size:.85rem;">@plaisirbarber</span>
+                            <span style="color:#9ca3af;font-size:.85rem;">@plaisirbarber90</span>
                         </a>
                     <?php endif; ?>
 
                     <a href="<?php echo esc_url($pb['whatsapp_url']); ?>" target="_blank" rel="noreferrer">
                         🎥 WhatsApp<br>
-                        <span style="color:#9ca3af;font-size:.85rem;">@plaisirbarber</span>
+                        <span style="color:#9ca3af;font-size:.85rem;">@plaisirbarber90</span>
                     </a>
                 </div>
                 <div style="display:flex;flex-direction:column;gap:.75rem;font-size:.95rem;">
