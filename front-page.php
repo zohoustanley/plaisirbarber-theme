@@ -373,16 +373,18 @@ if (function_exists('pbcore_get_settings')) {
                     <div style="width:100%;height:260px;border-radius:1rem;overflow:hidden;margin-bottom:1rem;">
                         <?php
                         if (!empty($pb['map_iframe'])) {
-                            // On affiche exactement le code iframe fourni dans l'admin
                             echo $pb['map_iframe']; // déjà sécurisé par wp_kses_post côté plugin
                         } else {
                             ?>
                             <iframe
-                                    src="https://maps.google.com/maps?q=Paris&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2171.094230097475!2d2.3753048050868695!3d48.993040670870776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6698a6a15ff9f%3A0x5403dc490c25a94b!2s74%20Rue%20Pierre%20Brossolette%2C%2095200%20Sarcelles%2C%20France!5e0!3m2!1sfr!2sus!4v1762704113796!5m2!1sfr!2sus"
                                     width="100%"
                                     height="260"
                                     style="border:0;"
-                                    loading="lazy">
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+
                             </iframe>
                             <?php
                         }
