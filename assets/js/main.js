@@ -172,3 +172,67 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = Array.from(
+        document.querySelectorAll('.main-nav .menu a')
+    );
+
+    if (!navLinks.length) return;
+
+    const sections = navLinks
+        .map(link => {
+            let href = link.getAttribute('href');
+            let id = null;
+
+            try {
+                const url = new URL(href, window.location.origin);
+                id = url.hash !== '' ? url.hash.replace('#', '') : 'top';
+            } catch (e) {
+                if (href.includes('#')) {
+                    id = href.split('#')[1];
+                }else{
+                    id = 'top';
+                }
+            }
+
+            const section = id ? document.getElementById(id) : null;
+            return section ? { link, section } : null;
+        })
+        .filter(Boolean);
+
+    if (!sections.length) return;
+
+    const setActiveLinkForId = (id) => {
+        navLinks.forEach(link => {
+            let href = link.getAttribute('href');
+            const hash = href.includes('#') ? href.split('#')[1] : ( href.includes('prise-de-rendez-vous') ? '' :'top' );
+            link.classList.toggle('is-active', hash === id);
+        });
+    };
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            const visible = entries
+                .filter(entry => entry.isIntersecting)
+                .sort((a, b) => a.target.offsetTop - b.target.offsetTop);
+
+            if (!visible.length) return;
+
+            const currentSection = visible[0].target;
+            setActiveLinkForId(currentSection.id);
+        },
+        { threshold: 0.5 }
+    );
+
+    sections.forEach(({ section }) => observer.observe(section));
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            let href = link.getAttribute('href');
+            let id = href.includes('#') ? href.split('#')[1] : 'top';
+            setActiveLinkForId(id);
+        });
+    });
+});
+

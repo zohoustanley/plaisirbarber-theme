@@ -623,11 +623,29 @@ a {
     transition: width .2s ease;
 }
 
-.main-nav .menu .current-menu-item > a::after,
-.main-nav .menu .current_page_item > a::after,
-.main-nav .menu .current-menu-ancestor > a::after {
+/* On laisse WordPress gérer l’item courant sur les pages ≠ home */
+body:not(.home) .main-nav .menu .current-menu-item > a::after,
+body:not(.home) .main-nav .menu .current_page_item > a::after,
+body:not(.home) .main-nav .menu .current-menu-ancestor > a::after {
     width: 100%;
 }
+
+/* Et éventuellement la couleur sur les pages ≠ home */
+body:not(.home) .main-nav .menu .current-menu-item > a,
+body:not(.home) .main-nav .menu .current_page_item > a,
+body:not(.home) .main-nav .menu .current-menu-ancestor > a {
+    color: #fbbf24;
+}
+
+
+.main-nav .menu a.is-active {
+    color: #fbbf24;
+}
+
+.main-nav .menu a.is-active::after {
+    width: 100%;
+}
+
 
 .header-inner {
     display: flex;
