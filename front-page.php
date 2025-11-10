@@ -10,17 +10,19 @@ if (function_exists('pbcore_get_settings')) {
     $pb = pbcore_get_settings();
 } else {
     $pb = [
-        'hero_title'    => "Où tradition rencontre style moderne",
-        'hero_subtitle' => "Barber shop dédié à ceux qui veulent une coupe nette, une barbe soignée et une expérience premium.",
+        'hero_title'    => "Expression et passion à votre service",
+        'hero_subtitle' => "Une équipe compétente et dédiée à sublimer votre style",
         'hero_cta_label'=> "Prendre rendez-vous",
-        'hero_video_url'=> "",
-        'address'       => "12 rue du Barber, 78370 Plaisir",
-        'phone'         => "01 23 45 67 89",
-        'email'         => "contact@plaisirbarber.fr",
-        'hours'         => "Mardi – Samedi : 10h–20h",
-        'instagram_url' => "https://www.instagram.com",
-        'tiktok_url'    => "https://www.tiktok.com",
-        'whatsapp_url'    => "https://www.whatsapp.com",
+        'hero_video_url'=> "https://plaisirbarber90.fr/wp-content/uploads/2025/11/VIDEO-2025-11-10-09-33-50.mp4",
+        'address'       => "74 rue Pierre Brossolette, 95200 Sarcelles",
+        'phone'         => "+33 6 77 57 50 77",
+        'email'         => "plaisirbarber90@gmail.com",
+        'barbershop_booking_email' => "plaisirbarber90@gmail.com",
+        'hours'         => "Mardi – Samedi : 10h–20h l Dimanche : 11h - 19h",
+        'instagram_url' => "https://www.instagram.com/plaisirbarber90/",
+        'tiktok_url'    => "https://www.tiktok.com/@plaisirbarber90?_t=ZN-90aIobHTj9i&_r=1",
+        'whatsapp_url'    => "https://api.whatsapp.com/send/?phone=33677575077&text=Bonjour%2C+je+souhaite+prendre+rendez-vous&type=phone_number&app_absent=0",
+        'youtube_url'    => "https://www.youtube.com/@plaisirbarber90",
         'map_iframe'    => "",
     ];
 }
@@ -353,6 +355,13 @@ if (function_exists('pbcore_get_settings')) {
                     <?php if (!empty($pb['whatsapp_url'])) : ?>
                         <a href="<?php echo esc_url($pb['whatsapp_url']); ?>" target="_blank" rel="noreferrer">
                             💬 WhatsApp<br>
+                            <span>@plaisirbarber90</span>
+                        </a>
+                    <?php endif; ?>
+
+                    <?php if (!empty($pb['youtube_url'])) : ?>
+                        <a href="<?php echo esc_url($pb['youtube_url']); ?>" target="_blank" rel="noreferrer">
+                            ▶️ Youtube<br>
                             <span>@plaisirbarber90</span>
                         </a>
                     <?php endif; ?>
