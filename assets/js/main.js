@@ -236,3 +236,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const leaderVideo = document.querySelector('.leader-video');
+    if (!leaderVideo) return;
+
+    // On s'assure qu'elle est muette (au cas où)
+    leaderVideo.muted = true;
+
+    const tryPlay = () => {
+        const playPromise = leaderVideo.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(() => {
+                // Certains navigateurs refusent la première tentative,
+                // on peut éventuellement réessayer après une petite durée.
+                setTimeout(() => {
+                    leaderVideo.play().catch(() => {
+                        // Si ça échoue encore, on laisse tomber (l'utilisateur devra cliquer)
+                    });
+                }, 500);
+            });
+        }
+    };
+
+    tryPlay();
+});
+
