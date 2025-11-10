@@ -804,3 +804,32 @@ body:not(.home) .main-nav .menu .current-menu-ancestor > a {
 .bs-booking-step-confirm{
     color: #111827 !important;
 }
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+    font-size: .95rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #f9fafb;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.social-links a span {
+    color: #9ca3af;
+    font-size: .85rem;
+}
+
+/* 🟢 Sur mobile : disposition verticale */
+@media (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+}

@@ -334,33 +334,38 @@ if (function_exists('pbcore_get_settings')) {
                 <p style="color:#9ca3af;margin-bottom:1.5rem;">
                     Avant / après, nouveaux styles, promos et live sur nos réseaux.
                 </p>
-                <div style="display:flex; gap:2rem; font-size:.95rem; margin-bottom:1.5rem;">
+
+                <div class="social-links">
                     <?php if (!empty($pb['instagram_url'])) : ?>
                         <a href="<?php echo esc_url($pb['instagram_url']); ?>" target="_blank" rel="noreferrer">
                             📸 Instagram<br>
-                            <span style="color:#9ca3af;font-size:.85rem;">@plaisirbarber90</span>
-                        </a>
-                    <?php endif; ?>
-                    <?php if (!empty($pb['tiktok_url'])) : ?>
-                        <a href="<?php echo esc_url($pb['tiktok_url']); ?>" target="_blank" rel="noreferrer">
-                            🎥 TikTok<br>
-                            <span style="color:#9ca3af;font-size:.85rem;">@plaisirbarber90</span>
+                            <span>@plaisirbarber90</span>
                         </a>
                     <?php endif; ?>
 
-                    <a href="<?php echo esc_url($pb['whatsapp_url']); ?>" target="_blank" rel="noreferrer">
-                        🎥 WhatsApp<br>
-                        <span style="color:#9ca3af;font-size:.85rem;">@plaisirbarber90</span>
-                    </a>
+                    <?php if (!empty($pb['tiktok_url'])) : ?>
+                        <a href="<?php echo esc_url($pb['tiktok_url']); ?>" target="_blank" rel="noreferrer">
+                            🎥 TikTok<br>
+                            <span>@plaisirbarber90</span>
+                        </a>
+                    <?php endif; ?>
+
+                    <?php if (!empty($pb['whatsapp_url'])) : ?>
+                        <a href="<?php echo esc_url($pb['whatsapp_url']); ?>" target="_blank" rel="noreferrer">
+                            💬 WhatsApp<br>
+                            <span>@plaisirbarber90</span>
+                        </a>
+                    <?php endif; ?>
                 </div>
-                <div style="display:flex;flex-direction:column;gap:.75rem;font-size:.95rem;">
-                    <p style="margin:.25rem 0;font-size:.9rem;"><span class="barbercolor">Adresse: </span> <?php echo esc_html($pb['address']); ?></p>
-                    <p style="margin:.25rem 0;font-size:.9rem;"><span class="barbercolor">Téléphone: </span>
+
+                <div class="contact-infos">
+                    <p><span class="barbercolor">Adresse: </span> <?php echo esc_html($pb['address']); ?></p>
+                    <p><span class="barbercolor">Téléphone: </span>
                         <a href="tel:<?php echo esc_attr(preg_replace('/\D+/', '', $pb['phone'])); ?>">
                             <?php echo esc_html($pb['phone']); ?>
                         </a>
                     </p>
-                    <p style="margin:.25rem 0;font-size:.9rem;"><span class="barbercolor">E-mail: </span>
+                    <p><span class="barbercolor">E-mail: </span>
                         <a href="mailto:<?php echo esc_attr($pb['email']); ?>">
                             <?php echo esc_html($pb['email']); ?>
                         </a>
